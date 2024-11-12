@@ -3,6 +3,7 @@ import HourlyTemp from '@/components/HourlyTemp';
 import LoadingSkeleton from '@/components/LoadingSkeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button'
+import WeatherDets from '@/components/WeatherDets';
 import { useGeolocation } from '@/hooks/useGeolocation'
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from '@/hooks/useWeather';
 import { MapPin, RefreshCcw, Terminal } from 'lucide-react'
@@ -84,7 +85,7 @@ const Dashboard = () => {
         <h1 className='text-xl font-bold tracking-tight'>My Location</h1>
         <Button variant={"outline"} size={"icon"}
           onClick={handleRefresh}
-          dissable={ weatherQuery.isFetching || forecastQuery.isFetching}
+          dissable={ weatherQuery.isFetching || forecastQuery.isFetching }
         >
           <RefreshCcw className={`h-4 w-""4 ${weatherQuery.isFetching? "animate-spin" : ""}`} />
         </Button>
@@ -95,7 +96,7 @@ const Dashboard = () => {
           <HourlyTemp data={forecastQuery.data} />
         </div>
         <div>
-
+          <WeatherDets data={weatherQuery.data} />
         </div>
       </div>
     </div>
