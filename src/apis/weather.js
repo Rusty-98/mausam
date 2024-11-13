@@ -50,6 +50,15 @@ class WeatherApi {
 
         return this.fetchData(url);
     }
+
+    async searchLocations(auery) {
+        const url = this.createUrl(`${API_CONFIG.GEO}/direct`, {
+            q: auery,
+            limit: 5
+        });
+
+        return this.fetchData(url);
+    }
 }
 
 export const weatherApi = new WeatherApi();
