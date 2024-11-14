@@ -15,7 +15,7 @@ const Header = () => {
                 <Link to='/' className='flex items-center justify-center gap-2'>
                     <img src="itsLogo.png" alt="" className='w-16 h-16' />
                 </Link>
-                <div className='flex gap-4'>
+                <div className='flex items-center gap-4'>
                     {/* search */}
                     <CitySearch />
                     {/* theme provider */}

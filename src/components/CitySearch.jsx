@@ -23,9 +23,8 @@ const CitySearch = () => {
         const [lat, lon, name, country] = cityData.split('|');
 
         addToHistory.mutate({ query, name, lat: parseFloat(lat), lon: parseFloat(lon), country });
-        // add to search history 
         setOpen(false);
-
+        setQuery('');
         navigate(`/city/${name}?lat=${lat}&lon=${lon}`);
     }
 
