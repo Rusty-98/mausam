@@ -19,11 +19,20 @@ const Header = () => {
                     {/* search */}
                     <CitySearch />
                     {/* theme provider */}
-                    <div className='cursor-pointer' onClick={() => {
-                        setTheme(isdark ? 'light' : 'dark')
-                    }}>
-                        {isdark ? <Sun className='h-6 w-6 text-yellow-500 rotate-0 transition-all' /> : <Moon className='h-6 w-6 text-blue-500 rotate-0 transition-all' />}
+                    <div
+                        onClick={() => setTheme(isdark ? "light" : "dark")}
+                        className={`flex items-center cursor-pointer transition-transform duration-500 ${isdark ? "rotate-180" : "rotate-0"
+                            }`}
+                    >
+                        {isdark ? (
+                            <Sun className="h-6 w-6 text-yellow-500 rotate-0 transition-all" />
+                        ) : (
+                            <Moon className="h-6 w-6 text-blue-500 rotate-0 transition-all" />
+                        )}
+                        <span className="sr-only">Toggle theme</span>
                     </div>
+
+
                 </div>
             </div>
         </header>
