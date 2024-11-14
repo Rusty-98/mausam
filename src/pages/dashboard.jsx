@@ -1,4 +1,5 @@
 import CurrentWeather from '@/components/CurrentWeather';
+import FavCities from '@/components/FavCities';
 import HourlyTemp from '@/components/HourlyTemp';
 import LoadingSkeleton from '@/components/LoadingSkeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -82,6 +83,7 @@ const Dashboard = () => {
   return (
     <div className='space-y-4'>
       {/* fav citi */}
+      <FavCities />
       <div className='flex items-center justify-between'>
         <h1 className='text-xl font-bold tracking-tight'>My Location</h1>
         <Button variant={"outline"} size={"icon"}

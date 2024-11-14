@@ -61,7 +61,7 @@ const CurrentWeather = ({ data, locationName }) => {
                             <div className='flex items-center gap-2'>
                                 <Wind className='h-4 w-4 text-blue-500' />
                                 <div className='space-y-0.5'>
-                                    <p className='text-sm font-medium'>Humidity</p>
+                                    <p className='text-sm font-medium'>Wind</p>
                                     <p className='text-sm text-muted-foreground'>{speed} m/s</p>
                                 </div>
                             </div>

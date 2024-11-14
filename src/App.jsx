@@ -4,6 +4,8 @@ import Layout from './components/Layout'
 import { ThemeProvider } from './context/theme-provider'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Dashboard from './pages/dashboard'
+import City from './pages/city'
+import { Toaster } from 'sonner'
 
 
 
@@ -28,8 +30,10 @@ function App() {
             <Layout>
               <Routes>
                 <Route path='/' element={<Dashboard />} />
+                <Route path='/city/:cityName' element={<City />} />
               </Routes>
             </Layout>
+            <Toaster richColors />
           </ThemeProvider>
         </BrowserRouter>
       </QueryClientProvider>
