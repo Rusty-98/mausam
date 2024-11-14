@@ -13,7 +13,7 @@ const Header = () => {
         <header className='sticky top-0 z-50 py-2 backdrop-blur w-full border-b'>
             <div className='container mx-auto flex h-16 items-center justify-between px-4'>
                 <Link to='/' className='flex items-center justify-center gap-2'>
-                    <img src="logo.png" alt="" className='w-16 h-16' />
+                    <img src="itsLogo.png" alt="" className='w-16 h-16' />
                 </Link>
                 <div className='flex gap-4'>
                     {/* search */}
