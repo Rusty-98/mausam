@@ -24,21 +24,30 @@ Mausam is a sleek, modern web application providing real-time weather updates, d
 
 ```
 📦 src
+ ┣ 📂apis
+ ┃ ┣ 📜config.js   # Configurations for api usage
+ ┃ ┣ 📜weather.js   # Methods to use api
  ┣ 📂components
  ┃ ┣ 📜CurrentWeather.jsx   # Displays current weather details
  ┃ ┣ 📜FavCities.jsx        # Favorite cities section
  ┃ ┣ 📜HourlyTemp.jsx       # Hourly temperature component
  ┃ ┗ 📜WeatherForecast.jsx  # Weekly forecast component
+ ┃ ┗ 📜WeatherForecast.jsx  # Weekly forecast component
+ ┃ ┗ 📜WeatherDets.jsx  # Weekly forecast component
+ ┃ ┗ 📜Layout.jsx  # Layout of a app
+ ┃ ┗ 📜Loading.jsx  # Initial loader of a application 
+ ┃ ┗ 📜CitySearch.jsx  # Search for cities component
+ ┃ ┗ ...
  ┣ 📂hooks
  ┃ ┣ 📜useGeolocation.js    # Hook for location access
  ┃ ┣ 📜useWeather.js        # Fetch weather and forecast data
+ ┃ ┣ 📜useLocalStorage.js   # For checking and storing data
+ ┃ ┣ ...
  ┣ 📂pages
  ┃ ┣ 📜Dashboard.jsx        # Main dashboard page
  ┃ ┗ 📜City.jsx             # City-specific weather page
  ┣ 📂context
  ┃ ┗ 📜theme-provider.jsx   # Manages app themes (light/dark mode)
- ┣ 📂styles
- ┃ ┗ 📜index.css            # Global styles
  ┗ 📜App.jsx                # Root component
 ```
 
@@ -85,10 +94,6 @@ You can obtain your API key from [WeatherAPI.com](https://www.weatherapi.com).
 - **Theme Configuration**: Modify `theme-provider.jsx` to add or customize themes.
 - **Styling**: Update Tailwind CSS styles in `index.css` or directly in component files.
 - **Favicons**: Replace the default favicon in the `/public` directory with your own branding.
-
-## 📜 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ## 🤝 Contributing
 
